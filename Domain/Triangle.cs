@@ -8,6 +8,10 @@ public class Triangle : IShape
         _sides[1] = side2;
         _sides[2] = side3;
         _sides = _sides.OrderBy(side => side).ToList();
+        if(_sides[0] + _sides[1] <= _sides[2])
+        {
+            throw new WrongTriangleExaption();
+        }
     }
 
     private bool IsRightAngled()

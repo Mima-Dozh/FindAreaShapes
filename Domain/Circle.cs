@@ -1,6 +1,6 @@
 public class Circle : IShape
 {
-    private double _radius;
+    public double _radius;
 
     public Circle(double radius)
     {
@@ -9,6 +9,6 @@ public class Circle : IShape
 
     public double GetArea()
     {
-        return 2 * Math.PI * _radius * _radius;
+        return Math.PI * _radius * _radius;
     }
 }
